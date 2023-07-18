@@ -1,5 +1,4 @@
 from Module import Module
-import math
 
 PER_CONST = pow(10,-6)
 TR= Module('Transducer',1000*PER_CONST, 100)
@@ -33,3 +32,5 @@ A_P = Module("Audio Processor", 20*PER_CONST, 100)
 New_sys = TR * P_S * H_E * T_R_S * P_A * PRE_A * F_P * (S_C | S_C) * (SDLC | SDLC) * S_P * ((D_P * (D_M | D_M)) | (D_P * (D_M | D_M)) ) * A_P
 
 print(New_sys)
+
+print(TR.name)
